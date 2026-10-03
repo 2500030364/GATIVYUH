@@ -1,7 +1,7 @@
 .experience-root { min-height: 100vh; }
 .experience-entering .landing-world { opacity: .08; transform: scale(.985); filter: blur(5px); }
 .experience-returning > div { opacity: .08; transform: scale(.985); filter: blur(5px); }
-.landing-world { --land-ink: #28332b; --land-muted: #677369; --land-olive: #536b4f; --land-green: #334a35; --land-stone: #e1e5da; position: relative; min-height: 100vh; overflow: clip; color: var(--land-ink); background: #f5f5ef; transition: opacity .62s ease, transform .78s cubic-bezier(.2,.7,.15,1), filter .62s ease; }
+.landing-world { --land-ink: #26382c; --land-muted: #536355; --land-olive: #496247; --land-green: #2f4b35; --land-stone: #e1e5da; position: relative; min-height: 100vh; overflow: clip; color: var(--land-ink); background: #f5f5ef; transition: opacity .62s ease, transform .78s cubic-bezier(.2,.7,.15,1), filter .62s ease; }
 .landing-world::before { position: fixed; z-index: 0; inset: 0; pointer-events: none; content: ""; opacity: .78; background: radial-gradient(ellipse at 72% 28%, rgba(211,220,201,.58), transparent 43%), radial-gradient(ellipse at 15% 72%, rgba(232,224,205,.45), transparent 42%), linear-gradient(127deg, #f8f8f3 0%, #eff1e9 100%); }
 .landing-world::after { position: fixed; z-index: 0; inset: 0; pointer-events: none; content: ""; opacity: .17; background-image: radial-gradient(#91a187 0.6px, transparent .6px); background-size: 22px 22px; mask-image: linear-gradient(90deg, transparent 20%, black 78%); }
 .landing-header { position: sticky; z-index: 30; top: 0; display: flex; align-items: center; justify-content: space-between; min-height: 74px; padding: .7rem clamp(1rem, 4vw, 4rem); border-bottom: 1px solid rgba(110,130,105,.2); background: rgba(246,247,241,.74); backdrop-filter: blur(14px); }
@@ -128,17 +128,77 @@
 @keyframes transition-route { 45% { transform: rotate(-10deg) scaleX(1); } to { transform: rotate(-10deg) scaleX(1.2); opacity: 0; } }
 @keyframes transition-node { to { transform: translate(-50%,-50%) scale(1.2); opacity: 0; } }
 
+/* Readability and color balance refinement. */
+.landing-brand strong, .landing-footer a { color: var(--land-green); }
+.landing-brand small { color: #536355; font-size: .78rem; }
+.landing-header-note { color: #536653; font-size: .72rem; }
+.landing-enter-button, .landing-enter-cta { font-size: .84rem; }
+.landing-progress-rail button span { color: #465c48; font-size: .73rem; border-color: rgba(73,98,71,.12); }
+.chapter-eyebrow { color: var(--land-green); font-size: .75rem; }
+.chapter-body { color: #536355; }
+.quiet-data-stamp { border-left-color: #496247; }
+.quiet-data-stamp span, .quiet-data-stamp small { color: #526453; font-size: .72rem; }
+.quiet-data-stamp b { color: #304b35; font-size: .88rem; }
+.chapter-index { color: #536653; font-size: .74rem; }
+.requirement-glass { border-color: rgba(73,98,71,.2); }
+.glass-corner-mark { color: #435d43; font-size: .72rem; }
+.requirement-glass > span { color: #79592d; font-size: .78rem; }
+.requirement-glass > small { color: #536355; font-size: .82rem; line-height: 1.7; }
+.fragment-note, .movement-note { color: #405a42; font-size: .82rem; }
+.fragment-note { border-color: rgba(73,98,71,.36); }
+.connection-sequence { color: #405a42; font-size: .71rem; }
+.connection-sequence svg { color: #647b60; }
+.movement-note { font-size: .75rem; }
+.stage-stops button { border-color: rgba(73,98,71,.4); color: #4e634d; font-size: .71rem; }
+.stage-stops button b { color: #536d50; font-size: .68rem; }
+.stage-stops button:hover, .stage-stops button.complete { border-color: #496247; color: #304b35; }
+.whatif-state { font-size: .75rem; }
+.whatif-state.clear { color: #405b40; }
+.whatif-signal { border-left-color: #536d4c; }
+.whatif-signal p { color: #536355; font-size: .82rem; line-height: 1.7; }
+.network-facts span { color: #536355; font-size: .7rem; }
+.network-facts b { color: #304b35; }
+.landing-footer { color: #536355; font-size: .74rem; border-top-color: rgba(73,98,71,.3); }
+.landing-footer a, .landing-footer button { color: #365239; }
+.landing-footer button { font-size: .75rem; }
+.landing-scroll-prompt { color: #4f654d; font-size: .72rem; }
+.canvas-topline { color: #4b6149; font-size: .7rem; }
+.story-contour { stroke: #788c71; opacity: .25; }
+.contour-two, .contour-four { opacity: .18; }
+.story-network-lines.connected path { stroke: #5e7658; opacity: .64; }
+.gis-road.open { stroke: url(#storyRouteGradient); }
+.story-location circle { fill: #405b43; }
+.story-location.risk circle:first-child { fill: #ad7048; }
+.story-location text { fill: #405540; font-size: 13px; stroke: rgba(248,248,241,.96); stroke-width: 4px; }
+.signal-fragment.linked rect { stroke: rgba(73,98,71,.52); }
+.signal-content { color: #3e583e; font-size: 13px; }
+.requirement-panel .panel-eyebrow { fill: #4c6249; font-size: 11px; }
+.requirement-panel .panel-main { fill: #2f4934; font-size: 14px; }
+.requirement-panel .panel-detail { fill: #795b31; font-size: 12px; }
+.cargo-float rect { stroke: rgba(73,98,71,.3); }
+.cargo-label { fill: #4c6049; font-size: 11px; }
+.cargo-value { fill: #304b35; font-size: 12px; }
+.story-hazard .hazard-caption { fill: #805b43; font-size: 11px; }
+.story-convoy > text { fill: #304b35; font-size: 11px; }
+.canvas-footnote { color: #526451; font-size: .7rem; border-top-color: rgba(73,98,71,.25); }
+.canvas-data-rail { border-top-color: rgba(73,98,71,.18); }
+.canvas-data-rail span { border-color: rgba(73,98,71,.26); color: #4d624a; background: rgba(250,252,248,.56); font-size: .68rem; line-height: 1.45; }
+.canvas-data-rail .canvas-risk-state { color: #8b5d3d; }
+.visual-stage-caption { color: #526451; font-size: .71rem; }
+.visual-stage-caption strong { color: #365239; font-size: .76rem; }
+.visual-stage-readout { color: #536355; font-size: .68rem; }
+
 @media (max-width: 1050px) {
   .landing-story-layout { grid-template-columns: minmax(260px, .68fr) minmax(420px, 1.32fr); gap: 1rem; padding-right: 1.2rem; padding-left: 3.1rem; }
   .landing-title { font-size: clamp(2.5rem, 5vw, 4rem); }
-  .canvas-topline { font-size: .48rem; }
+  .canvas-topline { font-size: .62rem; }
 }
 @media (max-width: 760px) {
   .landing-header { min-height: 66px; padding: .55rem .8rem; }
   .landing-brand-mark { width: 34px; height: 34px; }
-  .landing-brand small { max-width: 180px; font-size: .56rem; }
+  .landing-brand small { max-width: 180px; font-size: .7rem; }
   .landing-header-note { display: none; }
-  .landing-enter-button { min-height: 36px; padding: .48rem .62rem; font-size: .67rem; }
+  .landing-enter-button { min-height: 36px; padding: .48rem .62rem; font-size: .75rem; }
   .landing-progress-rail { top: auto; right: .65rem; bottom: .55rem; left: .65rem; flex-direction: row; justify-content: space-between; gap: 0; padding: .45rem .55rem; border: 1px solid rgba(255,255,255,.64); border-radius: 10px; background: rgba(244,246,240,.77); backdrop-filter: blur(12px); transform: none; }
   .landing-progress-line, .landing-progress-fill { top: 50%; right: 1.3rem; bottom: auto; left: 1.3rem; width: auto; height: 1px; }
   .landing-progress-fill { right: auto; width: var(--story-progress); height: 1px; }
@@ -152,15 +212,16 @@
   .landing-visual-sticky { position: sticky; top: 72px; gap: .3rem; padding: .65rem 0 .4rem; }
   .story-canvas { border-radius: 12px; }
   .story-map { min-height: 225px; margin: 1.7rem 0 .8rem; }
-  .canvas-topline { top: .7rem; right: .7rem; left: .7rem; font-size: .43rem; }
+  .canvas-topline { top: .7rem; right: .7rem; left: .7rem; font-size: .62rem; }
   .canvas-data-rail { display: none; }
-  .canvas-footnote { margin-right: .55rem; margin-left: .55rem; font-size: .46rem; }
-  .visual-stage-caption { padding: .15rem .15rem; }
+  .canvas-footnote { margin-right: .55rem; margin-left: .55rem; font-size: .62rem; }
+  .canvas-data-rail span { font-size: .62rem; }
+  .visual-stage-caption { padding: .15rem .15rem; font-size: .66rem; }
   .landing-scroll-prompt { display: none; }
   .landing-title { margin-top: 1rem; font-size: clamp(2.75rem, 12vw, 4rem); }
   .chapter-title { font-size: clamp(2rem, 9vw, 3rem); }
   .chapter-body { font-size: .9rem; }
-  .chapter-index { right: .3rem; bottom: 1.15rem; }
+  .chapter-index { right: .3rem; bottom: 1.15rem; font-size: .72rem; }
   .landing-footer { padding-bottom: 3rem; }
 }
 @media (prefers-reduced-motion: reduce) {
