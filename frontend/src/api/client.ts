@@ -1,4 +1,5 @@
-export const API_BASE = "http://127.0.0.1:8000/api";
+const configuredApiBase = import.meta.env.VITE_API_URL?.trim();
+export const API_BASE = (configuredApiBase || "http://127.0.0.1:8000/api").replace(/\/+$/, "");
 
 export interface Location {
   id: string;

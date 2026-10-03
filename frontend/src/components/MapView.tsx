@@ -6,7 +6,7 @@ import {
   Wind, Thermometer, Droplets, ShieldAlert, Clock, RefreshCw
 } from "lucide-react";
 import { 
-  Location, GISOverview, api, LocationDetail, InventoryItem, 
+  API_BASE, Location, GISOverview, api, LocationDetail, InventoryItem,
   LogisticsEvent, Alert, RiskAssessment, WeatherObservation 
 } from "../api/client";
 
@@ -197,7 +197,7 @@ export const MapView: React.FC<MapViewProps> = ({
       [18.300138, 73.299861],
       [18.800138, 73.899861]
     ];
-    const overlayUrl = "http://127.0.0.1:8000/api/gis/elevation/overlay.png";
+    const overlayUrl = `${API_BASE}/gis/elevation/overlay.png`;
     const overlay = L.imageOverlay(overlayUrl, terrainBounds, {
       opacity: 0.65,
       interactive: false,
