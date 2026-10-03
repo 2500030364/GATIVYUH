@@ -1,0 +1,31 @@
+# Pyrefly Configuration for GATIVYUH
+python-interpreter-path = "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\python.exe"
+python-platform = "windows"
+python-version = "3.14.3"
+
+site-package-path = [
+    "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages",
+    "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\DLLs",
+    "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314",
+]
+
+search-path = [
+    "d:\\SIH\\GatiVyuh\\backend",
+    "backend",
+]
+
+permissive-ignores = true
+check-unannotated-defs = false
+disable-type-errors-in-ide = true
+
+[errors]
+read-only = "ignore"
+missing-import = "ignore"
+bad-assignment = "ignore"
+bad-argument-type = "ignore"
+bad-index = "ignore"
+missing-attribute = "ignore"
+unsupported-operation = "ignore"
+bad-override = "ignore"
+invalid-variance = "ignore"
+bad-override-param-name = "ignore"
